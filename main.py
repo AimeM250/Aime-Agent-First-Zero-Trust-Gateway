@@ -11,7 +11,7 @@ import os
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("gateway")
 
-app = FastAPI(title="Agent-First Gateway MVP")
+app = FastAPI(title="Aime Agent-First Zero Trust Gateway MVP")
 
 # Mount Static UI
 app.mount("/static", StaticFiles(directory="static"), name="static")

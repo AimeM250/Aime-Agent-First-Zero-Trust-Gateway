@@ -1,4 +1,4 @@
-# Architectural Whitepaper: The Agent-First Zero-Trust Gateway
+# Architectural Whitepaper: Aime Agent-First Zero Trust Gateway
 
 ## 1. The Paradigm Shift: From Chatbots to Agents
 For the past three years, the AI industry has been obsessed with "Chatbots." In a chatbot architecture, the data flow is strictly conversational:
@@ -21,7 +21,7 @@ To give an AI access to a powerful tool (like a Bash terminal), developers curre
 2. **Application-Layer Validation**: Write custom `if/else` validation logic inside every single function the LLM can call. This is unscalable, prone to errors, and splits security policies across dozens of microservices.
 
 ## 3. The Solution: The Intent-Aware Proxy
-The **Agent-First Zero-Trust Gateway** solves this by moving Tool Security *out* of the application layer and down into the network infrastructure layer.
+**Aime Agent-First Zero Trust Gateway** solves this by moving Tool Security *out* of the application layer and down into the network infrastructure layer.
 
 ### How it Works (The Intercept & Inject Pattern)
 

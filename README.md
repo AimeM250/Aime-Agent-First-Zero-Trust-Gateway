@@ -1,4 +1,4 @@
-# Agent-First Zero-Trust Gateway
+# Aime Agent-First Zero Trust Gateway
 
 ![Dashboard Intercepting Traffic](static/demo.webp)
 
@@ -6,11 +6,11 @@
 
 Traditional AI Firewalls (like NeMo Guardrails or Presidio) focus on "Chatbots"—they block toxic text or redact PII from prompts. 
 
-But the future is **Autonomous Agents**. Agents don't just chat; they use tools to execute code, search the web, and wipe out databases. The Agent-First Gateway is an API proxy that intercepts these agent `tool_calls`, evaluates the *intent* of the parameters, and blocks destructive actions (like `rm -rf` or `DROP TABLE`) before they ever reach your servers.
+But the future is **Autonomous Agents**. Agents don't just chat; they use tools to execute code, search the web, and wipe out databases. Aime Agent-First Zero Trust Gateway is an API proxy that intercepts these agent `tool_calls`, evaluates the *intent* of the parameters, and blocks destructive actions (like `rm -rf` or `DROP TABLE`) before they ever reach your servers.
 
 If a tool is blocked, the gateway seamlessly injects a synthetic error message back into the AI's context window, allowing the agent to gracefully adapt without breaking your application loop.
 
-> For a deep dive into the architectural theory, read the [Agent-First Zero-Trust Gateway Whitepaper](WHITEPAPER.md).
+> For a deep dive into the architectural theory, read the [Aime Agent-First Zero Trust Gateway Whitepaper](WHITEPAPER.md).
 
 ---
 
