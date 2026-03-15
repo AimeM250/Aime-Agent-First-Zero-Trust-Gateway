@@ -1,7 +1,7 @@
 import logging
 import json
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from proxy import forward_request
 from rules_engine import RulesEngine
@@ -18,6 +18,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 rules_engine = RulesEngine()
 audit_logger = AuditLogger(log_file="audit.log")
+
+@app.get("/")
+async def root():
+    return FileResponse("static/index.html")
 
 @app.get("/api/logs")
 async def get_logs():
